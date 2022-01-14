@@ -16,12 +16,12 @@ A user friendly crypto currency miner based on Alpine Linux and XMRig.
 ## Run
 ### Quick test
 ```
-docker run -d --name miner rundqvist/unmineable
+docker run -d --name miner kornflex/unmineable
 ```
 
 ### Configure miner for your coin and wallet
 Replace the values in the sample code with your desired settings.<br />
-Examples uses 50% of cpu to mine Shiba Inu to the specified wallet.
+Examples uses 50% of cpu to mine SOLANA to the specified wallet.
 
 #### Docker run
 ```
@@ -29,12 +29,12 @@ docker run \
   -d \
   --name=unmineable \
   -e 'CPU_LIMIT_PERCENT=50' \
-  -e 'COIN=SHIB' \
+  -e 'COIN=SOL' \
   -e 'WALLET=...' \
   -e 'WORKER=docker' \
   -e 'DIFFICULTY=35000' \
   -e 'DONATE=1' \
-  rundqvist/unmineable
+  kornflex/unmineable
 ```
 
 #### Docker compose
@@ -42,7 +42,7 @@ docker run \
 version: "3"
 services:
   unmineable:
-    image: rundqvist/unmineable
+    image: kornflex/unmineable
     container_name: unmineable
     
     restart: unless-stopped
@@ -51,7 +51,7 @@ services:
     
     environment:
       - CPU_LIMIT_PERCENT=50
-      - COIN=SHIB
+      - COIN=SOL
       - WALLET=...
       - WORKER=docker
       - DIFFICULTY=35000
@@ -76,3 +76,11 @@ services:
 
 ## Tips
 Problem allocating memory or lower hashrate than expected? Try running container in privileged mode.
+
+
+## Unineable Tips
+You can check how many SOL ( or other cryptos ) you earn in this URL : https://unmineable.com/coins/SOL/address/
+
+Check "auto pay" to have your earnings on your wallet.
+
+You can use DEX wallet ( metamask ... ) or DEX ( coinbase, binance ... ). But take care to choose the right network ( ETH, BSC ... ). Select the correct one on unmineable using "SWITCH NETWORK" button.
