@@ -16,7 +16,7 @@ A user friendly crypto currency miner based on Alpine Linux and XMRig.
 ## Run
 ### Quick test
 ```
-docker run -d --name miner kornflex/unmineable
+docker run -d --name miner kornflex/unmineable:master
 ```
 
 ### Configure miner for your coin and wallet
@@ -34,7 +34,7 @@ docker run \
   -e 'WORKER=docker' \
   -e 'DIFFICULTY=35000' \
   -e 'DONATE=1' \
-  kornflex/unmineable
+  kornflex/unmineable:master
 ```
 
 #### Docker compose
@@ -42,7 +42,7 @@ docker run \
 version: "3"
 services:
   unmineable:
-    image: kornflex/unmineable
+    image: kornflex/unmineable:master
     container_name: unmineable
     
     restart: unless-stopped
