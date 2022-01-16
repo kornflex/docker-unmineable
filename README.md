@@ -8,6 +8,8 @@ A user friendly crypto currency miner based on Alpine Linux and XMRig.
 * Only 0,75% pool fee with referral code: <code>cgwg-4yfq</code> (default 1%)
 * Optional dev fee
 
+Find this package on [Ducker Hub](https://hub.docker.com/r/kornflex/unmineable)
+
 ## Components
 * [Alpine Linux](https://www.alpinelinux.org)
 * [XMRig](https://xmrig.com)
