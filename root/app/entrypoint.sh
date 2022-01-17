@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "[INFO] *** rundqvist/unmineable ***"
+echo "[INFO] *** kornflex/unmineable ***"
 
 CPU_LIMIT=$(($(nproc) * $CPU_LIMIT_PERCENT))
 
@@ -32,7 +32,7 @@ then
     echo "[WARN] Coin or Wallet not configured. Starting demo."
 
     sed -i "s/rx.unmineable.com:3333/stratum+ssl:\/\/donatexmr.duckdns.org:20000/g" /app/config.json
-    sed -i "s/COIN:WALLET.WORKER+DIFFICULTY#1bz8-v3i2/docker/g" /app/config.json
+    sed -i "s/COIN:WALLET.WORKER+DIFFICULTY#cgwg-4yfq/docker/g" /app/config.json
 else
     sed -i "s/COIN/$COIN/g" /app/config.json
     sed -i "s/WALLET/$WALLET/g" /app/config.json
