@@ -1,6 +1,6 @@
 FROM alpine:3.12
 
-LABEL maintainer="mattias.rundqvist@icloud.com"
+LABEL maintainer="kornflex62@gmail.com"
 
 WORKDIR /app
 
